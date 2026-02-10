@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="0.239" timestamp="2026-02-10T14:56:06.851917+00:00" hostname="agent-env-10ede828-a13a-40fe-9356-0d8761ee9c63"><testcase classname="" name="tests.test_gurukrupa_apis" time="0.000"><error message="collection failure">tests/test_gurukrupa_apis.py:9: in &lt;module&gt;
+    BASE_URL = os.environ['EXPO_PUBLIC_BACKEND_URL']
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+&lt;frozen os&gt;:679: in __getitem__
+    ???
+E   KeyError: 'EXPO_PUBLIC_BACKEND_URL'</error></testcase></testsuite></testsuites>
