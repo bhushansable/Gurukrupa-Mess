@@ -1,0 +1,209 @@
+{
+  "identity": {
+    "name": "Gurukrupa Mess",
+    "ethos": "Authentic, Wholesome, Trustworthy. 'Ghar ka swad' (Taste of Home).",
+    "persona": "E1 - The Anti-AI Designer",
+    "tone": "Warm, Nostalgic, Efficient, Clean."
+  },
+  "typography": {
+    "font_family_english": "Manrope",
+    "font_family_marathi": "Mukta",
+    "weights": {
+      "light": "300",
+      "regular": "400",
+      "medium": "500",
+      "bold": "700",
+      "black": "800"
+    },
+    "scale": {
+      "h1": { "size": 32, "line_height": 40, "tracking": -0.5 },
+      "h2": { "size": 24, "line_height": 32, "tracking": -0.25 },
+      "h3": { "size": 20, "line_height": 28, "tracking": 0 },
+      "body_lg": { "size": 18, "line_height": 28 },
+      "body": { "size": 16, "line_height": 24 },
+      "caption": { "size": 14, "line_height": 20 },
+      "small": { "size": 12, "line_height": 16 }
+    },
+    "instructions": "Use 'Manrope' for all English text. Use 'Mukta' for all Marathi text. Ensure adequate line height for Marathi readability."
+  },
+  "colors": {
+    "primary": {
+      "default": "#C2410C",
+      "light": "#EA580C",
+      "dark": "#9A3412",
+      "bg": "#FFF7ED"
+    },
+    "secondary": {
+      "default": "#3F6212",
+      "light": "#65A30D",
+      "dark": "#365314",
+      "bg": "#ECFCCB"
+    },
+    "background": {
+      "default": "#FFFCF8",
+      "paper": "#FFFFFF",
+      "subtle": "#F5F5F4"
+    },
+    "text": {
+      "primary": "#1C1917",
+      "secondary": "#57534E",
+      "muted": "#A8A29E",
+      "inverted": "#FFFFFF"
+    },
+    "status": {
+      "success": "#15803D",
+      "warning": "#B45309",
+      "error": "#B91C1C",
+      "info": "#0369A1"
+    }
+  },
+  "spacing": {
+    "xs": 4,
+    "s": 8,
+    "m": 16,
+    "l": 24,
+    "xl": 32,
+    "xxl": 48,
+    "3xl": 64
+  },
+  "border_radius": {
+    "s": 8,
+    "m": 12,
+    "l": 16,
+    "xl": 24,
+    "full": 9999
+  },
+  "shadows": {
+    "small": {
+      "shadowColor": "#000",
+      "shadowOffset": { "width": 0, "height": 1 },
+      "shadowOpacity": 0.05,
+      "shadowRadius": 2,
+      "elevation": 2
+    },
+    "medium": {
+      "shadowColor": "#1C1917",
+      "shadowOffset": { "width": 0, "height": 4 },
+      "shadowOpacity": 0.08,
+      "shadowRadius": 6,
+      "elevation": 4
+    },
+    "large": {
+      "shadowColor": "#C2410C",
+      "shadowOffset": { "width": 0, "height": 8 },
+      "shadowOpacity": 0.12,
+      "shadowRadius": 16,
+      "elevation": 8
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": {
+        "backgroundColor": "#C2410C",
+        "borderRadius": 9999,
+        "paddingVertical": 16,
+        "paddingHorizontal": 24,
+        "alignItems": "center",
+        "justifyContent": "center",
+        "shadow": "medium"
+      },
+      "secondary": {
+        "backgroundColor": "#FFF7ED",
+        "borderRadius": 9999,
+        "paddingVertical": 16,
+        "paddingHorizontal": 24,
+        "borderWidth": 1,
+        "borderColor": "#C2410C"
+      }
+    },
+    "cards": {
+      "menu_item": {
+        "backgroundColor": "#FFFFFF",
+        "borderRadius": 16,
+        "padding": 12,
+        "shadow": "small",
+        "borderWidth": 1,
+        "borderColor": "#F5F5F4"
+      },
+      "featured": {
+        "backgroundColor": "#FFFFFF",
+        "borderRadius": 24,
+        "padding": 0,
+        "shadow": "medium",
+        "overflow": "hidden"
+      }
+    },
+    "inputs": {
+      "default": {
+        "backgroundColor": "#FFFFFF",
+        "borderRadius": 12,
+        "borderWidth": 1,
+        "borderColor": "#E7E5E4",
+        "padding": 16,
+        "fontSize": 16,
+        "color": "#1C1917"
+      }
+    }
+  },
+  "layout_strategies": {
+    "bento_grid": "Use Flexbox with 'flexWrap: wrap' and percentage widths (e.g., '48%' for two columns with 'gap: 4%'). Mix full-width hero cards with half-width detail cards.",
+    "list_view": "For Order History and Admin lists, use FlatList with generous padding (paddingVertical: 16).",
+    "safe_area": "Always wrap main content in SafeAreaView or equivalent padding to avoid notch overlap."
+  },
+  "navigation": {
+    "user": "Bottom Tab Bar (Home, Menu, Subscription, Profile). Floating Action Button for 'Cart' or 'Support'.",
+    "admin": "Drawer Navigation (Dashboard, Orders, Menu, Customers, Subscriptions). Distinct header color (#FFF7ED) to differentiate from User view."
+  },
+  "image_urls": {
+    "hero_thali": {
+      "url": "https://images.unsplash.com/photo-1704520836459-e12b4e6373aa?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "description": "Authentic Indian Thali with stainless steel bowls",
+      "category": "hero"
+    },
+    "menu_chapati": {
+      "url": "https://images.unsplash.com/photo-1764699486820-30a00e6ded7a?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "description": "Freshly made Chapati/Roti being cooked",
+      "category": "menu_item"
+    },
+    "menu_dal": {
+      "url": "https://images.unsplash.com/photo-1654886966939-e7a8643469b6?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "description": "Yellow Dal Tadka",
+      "category": "menu_item"
+    },
+    "menu_paneer": {
+      "url": "https://images.unsplash.com/photo-1586981114766-708f09a71e20?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "description": "Paneer Butter Masala",
+      "category": "menu_item"
+    },
+    "menu_sweet": {
+      "url": "https://images.unsplash.com/photo-1666190092159-3171cf0fbb12?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "description": "Gulab Jamun",
+      "category": "menu_item"
+    },
+    "user_family": {
+      "url": "https://images.unsplash.com/photo-1576089073624-b5751a8f4de9?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "description": "Happy Indian family eating dinner",
+      "category": "profile/landing"
+    }
+  },
+  "visual_enhancers": {
+    "texture": "Use a subtle noise pattern or 'paper' texture image on the background if possible, or keep it 'Warm Off-White' (#FFFCF8) to simulate paper.",
+    "icons": "Use 'lucide-react-native' or '@expo/vector-icons'. Style: Rounded, Stroke Width 2. Color: Primary (#C2410C) or Text Secondary (#57534E).",
+    "illustrations": "Avoid generic 3D hands. Use simple line art or the provided authentic photos."
+  },
+  "universal_guidelines": [
+    "Do not use generic 'blue' for primary actions. Use the defined 'Terracotta' (#C2410C).",
+    "Ensure 44px minimum touch targets for all buttons (Thumb-friendly).",
+    "Use 'elevation' for Android shadows and 'shadow*' props for iOS.",
+    "Always handle 'Loading' and 'Error' states gracefully with visual feedback.",
+    "For Marathi text, increase line height by 10-15% compared to English to accommodate matras.",
+    "Admin panels should be dense but touchable. Use 'Card' layouts for orders, not just tables."
+  ],
+  "instructions_to_main_agent": [
+    "Install 'lucide-react-native' for icons if not present.",
+    "Use React Native 'StyleSheet' or inline styles using the tokens above.",
+    "Do NOT use 'div', 'span', 'className'. Use 'View', 'Text', 'style'.",
+    "Implement the 'English / Marathi' toggle using a Context or simple state.",
+    "For the 'Menu', use a Masonry or Grid layout using Flexbox wrap."
+  ]
+}
