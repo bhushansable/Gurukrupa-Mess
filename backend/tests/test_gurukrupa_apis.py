@@ -5,8 +5,14 @@ Tests: seed data, auth (customer + admin), menu, plans, orders, subscriptions
 import pytest
 import requests
 import os
+from pathlib import Path
+from dotenv import load_dotenv
 
-BASE_URL = os.environ['EXPO_PUBLIC_BACKEND_URL']
+# Load frontend .env to get BASE_URL
+frontend_env = Path(__file__).parent.parent.parent / 'frontend' / '.env'
+load_dotenv(frontend_env)
+
+BASE_URL = os.environ.get('EXPO_PUBLIC_BACKEND_URL', 'https://daily-mess-box.preview.emergentagent.com')
 
 class TestSeedData:
     """Test seed data creation"""
