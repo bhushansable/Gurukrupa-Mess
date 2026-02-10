@@ -70,7 +70,7 @@ export default function HomeScreen() {
           </TouchableOpacity>
         </View>
 
-        {/* Hero Card */}
+        {/* Hero Card - Delivery */}
         <View style={styles.heroCard}>
           <View style={styles.heroContent}>
             <Text style={styles.heroTag}>{t('ghar_ka_swad')}</Text>
@@ -83,6 +83,25 @@ export default function HomeScreen() {
             </TouchableOpacity>
           </View>
           <Text style={styles.heroEmoji}>🍱</Text>
+        </View>
+
+        {/* Dine-In Card */}
+        <View style={styles.dineInCard}>
+          <View style={styles.dineInLeft}>
+            <View style={styles.dineInBadge}>
+              <Ionicons name="infinite" size={14} color="#FFF" />
+              <Text style={styles.dineInBadgeText}>{t('unlimited_food')}</Text>
+            </View>
+            <Text style={styles.dineInTitle}>{t('dine_in_title')}</Text>
+            <Text style={styles.dineInPrice}>₹80</Text>
+            <Text style={styles.dineInDesc}>{t('unlimited_desc')}</Text>
+            <Text style={styles.dineInIncludes}>{t('unlimited_includes')}</Text>
+            <TouchableOpacity testID="dine-in-btn" style={styles.dineInBtn} onPress={() => router.push('/checkout?mode=dine_in')}>
+              <Ionicons name="restaurant" size={16} color={COLORS.secondary.dark} />
+              <Text style={styles.dineInBtnText}>{t('eat_at_mess')}</Text>
+            </TouchableOpacity>
+          </View>
+          <Text style={styles.dineInEmoji}>🍽️</Text>
         </View>
 
         {/* Today's Special */}
