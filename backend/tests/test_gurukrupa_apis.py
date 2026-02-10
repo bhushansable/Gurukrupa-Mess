@@ -238,6 +238,72 @@ class TestPayment:
         print(f"✓ Mock payment successful: {data['payment_id']}")
 
 
+class TestDineInOrders:
+    """Test dine-in order flow (iteration 2 - new feature)"""
+    
+    @pytest.fixture
+    def customer_token(self):
+        """Get customer token for authenticated requests"""
+        response = requests.post(
+            f"{BASE_URL}/api/auth/login",
+            json={"email": "rahul@test.com", "password": "test123"}
+        )
+        return response.json()["token"]
+    
+    def test_create_dine_in_order(self, customer_token):
+        """POST /api/orders with order_type='dine_in' should create dine-in order"""
+        headers = {"Authorization": f"Bearer {customer_token}"}
+        order_data = {
+            "items": [{"name": "Dine-In Unlimited Thali", "qty": 2, "price": 80}],
+            "total": 160,
+            "order_type": "dine_in",
+            "delivery_address": "Dine-In at Gurukrupa Mess",
+            "notes": "Test dine-in order - 2 guests"
+        }
+        
+        response = requests.post(
+            f"{BASE_URL}/api/orders",
+            json=order_data,
+            headers=headers
+        )
+        assert response.status_code == 200, f"Create dine-in order failed: {response.text}"
+        
+        data = response.json()
+        assert "id" in data
+        assert data["order_type"] == "dine_in", "Order type should be 'dine_in'"
+        assert data["total"] == 160
+        assert data["items"][0]["name"] == "Dine-In Unlimited Thali"
+        assert data["items"][0]["qty"] == 2
+        assert data["delivery_address"] == "Dine-In at Gurukrupa Mess"
+        assert data["status"] == "pending"
+        assert "_id" not in data
+        print(f"✓ Dine-in order created successfully: {data['id']} for {data['total']} (2 guests)")
+        
+        # Verify order persists
+        order_id = data["id"]
+        get_response = requests.get(f"{BASE_URL}/api/orders/{order_id}", headers=headers)
+        assert get_response.status_code == 200
+        fetched_order = get_response.json()
+        assert fetched_order["id"] == order_id
+        assert fetched_order["order_type"] == "dine_in"
+        assert fetched_order["total"] == 160
+        print(f"✓ Dine-in order verified via GET /api/orders/{order_id}")
+    
+    def test_dine_in_order_appears_in_history(self, customer_token):
+        """Dine-in orders should appear in order history"""
+        headers = {"Authorization": f"Bearer {customer_token}"}
+        response = requests.get(f"{BASE_URL}/api/orders", headers=headers)
+        assert response.status_code == 200, f"Get orders failed: {response.text}"
+        
+        data = response.json()
+        assert isinstance(data, list)
+        
+        # Check if there's at least one dine-in order
+        dine_in_orders = [order for order in data if order.get("order_type") == "dine_in"]
+        assert len(dine_in_orders) > 0, "Should have at least one dine-in order"
+        print(f"✓ Order history contains {len(dine_in_orders)} dine-in order(s)")
+
+
 class TestAdminEndpoints:
     """Test admin-only endpoints"""
     
