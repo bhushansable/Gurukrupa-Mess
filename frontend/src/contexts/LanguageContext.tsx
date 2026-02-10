@@ -81,6 +81,18 @@ const translations: Record<string, Record<string, string>> = {
   'payment_success': { en: 'Payment Successful', mr: 'पेमेंट यशस्वी' },
   'place_order': { en: 'Place Order', mr: 'ऑर्डर द्या' },
   'pay': { en: 'Pay', mr: 'पैसे द्या' },
+  // Dine-in
+  'dine_in': { en: 'Dine In', mr: 'मेसमध्ये जेवा' },
+  'dine_in_title': { en: 'Dine-In Thali', mr: 'मेसमधील थाळी' },
+  'unlimited_food': { en: 'Unlimited Food', mr: 'अनलिमिटेड जेवण' },
+  'unlimited_desc': { en: 'Eat as much as you want!', mr: 'मनसोक्त जेवा!' },
+  'unlimited_includes': { en: 'Unlimited Rice, Roti, Dal, Sabzi, Salad & more', mr: 'अनलिमिटेड भात, चपाती, डाळ, भाजी, सॅलड आणि बरेच काही' },
+  'walk_in': { en: 'Walk-in, No booking needed', mr: 'थेट या, बुकिंगची गरज नाही' },
+  'dine_in_note': { en: 'Visit our mess and enjoy unlimited home-style food', mr: 'आमच्या मेसला भेट द्या आणि अनलिमिटेड घरगुती जेवणाचा आनंद घ्या' },
+  'delivery': { en: 'Delivery', mr: 'डिलिव्हरी' },
+  'eat_at_mess': { en: 'Eat at Mess', mr: 'मेसमध्ये खा' },
+  'dine_in_order': { en: 'Dine-In Order', mr: 'मेस ऑर्डर' },
+  'guests': { en: 'Guests', mr: 'पाहुणे' },
 };
 
 type LangContextType = {
