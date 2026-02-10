@@ -55,7 +55,9 @@ export default function OrderHistoryScreen() {
           <Text style={styles.orderTotal}>₹{item.total}</Text>
         </View>
         <View style={styles.orderFooter}>
-          <Text style={styles.orderType}>{item.order_type === 'subscription' ? 'Subscription' : 'Single Order'}</Text>
+          <Text style={styles.orderType}>
+            {item.order_type === 'subscription' ? 'Subscription' : item.order_type === 'dine_in' ? '🍽️ Dine-In' : '🍱 Delivery'}
+          </Text>
           <Ionicons name="chevron-forward" size={18} color={COLORS.text.muted} />
         </View>
       </TouchableOpacity>
