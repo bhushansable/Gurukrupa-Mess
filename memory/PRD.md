@@ -65,3 +65,4 @@ Full-stack cross-platform mobile app for Gurukrupa Mess, a tiffin/mess food deli
 - Delivery tracking with maps
 - Order export (CSV/PDF)
 - Analytics dashboard
+- Dine-in table reservation system
